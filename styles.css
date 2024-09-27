@@ -1,0 +1,38 @@
+.calc-body {
+    background-color: grey;
+    max-width: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    max-width: 400px;
+    font-size: 100px;
+    text-align: right;
+    margin: 50px;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.calc-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.digit-btn {
+    background-color: beige;
+    border-radius: 5px;
+    font-size: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+.fn-btn {
+    background-color: red;
+    border-radius: 5px;
+    font-size: 80px;
+    width: 150px;
+    text-align: center;
+}
