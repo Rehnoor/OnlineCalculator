@@ -6,6 +6,11 @@
     flex-direction: column;
 }
 
+#key-pad {
+    display: flex;
+    flex-direction: column;
+}
+
 #display {
     max-width: 400px;
     font-size: 100px;
@@ -19,6 +24,7 @@
 .calc-row {
     display: flex;
     justify-content: space-around;
+    margin: 10px;
 }
 
 .digit-btn {
@@ -35,4 +41,20 @@
     font-size: 80px;
     width: 150px;
     text-align: center;
+}
+
+#clr-btn {
+    width: 320px;
+}
+
+#last-row {
+    justify-content: space-between;
+}
+
+#zero {
+    margin-left: 112px;
+}
+
+#eq-btn {
+    margin-right: 3px;
 }

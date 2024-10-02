@@ -3,12 +3,17 @@ let op = null;
 let secondNum = null;
 const defNum = "0.0";
 let currDisp = defNum;
+let chainFlag = false;
 
 window.onload = function() {
     let digits = document.getElementsByClassName("digit-btn")
     for(let x = 0; x < digits.length; x++) {
         digits[x].addEventListener("click", () => {
             console.log(digits[x].textContent);
+            if (chainFlag) {
+                currDisp = defNum;
+                chainFlag = false;
+            }
             updateDisplay(digits[x].textContent);
         })
     }
@@ -21,6 +26,7 @@ window.onload = function() {
                 console.log("=" + ans);
                 firstNum = ans;
                 currDisp = defNum;
+                chainFlag = true;
                 updateDisplay(ans);
             } else {
                 firstNum = currDisp;
@@ -36,8 +42,12 @@ window.onload = function() {
         secondNum = currDisp;
         let ans = operate(op, firstNum, secondNum);
         // console.log(ans);
-        firstNum = ans;
-        updateDisplay(firstNum);
+        firstNum = null;
+        secondNum = null;
+        op = null;
+        currDisp = defNum;
+        chainFlag = false;
+        updateDisplay(ans);
     })
 
     let clr = document.getElementById("clr-btn");
